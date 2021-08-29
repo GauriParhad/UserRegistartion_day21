@@ -54,6 +54,12 @@ public class UserRegistration {
         Matcher matcher = pattern.matcher("91 9985467725");
         assertTrue(matcher.matches());
     }
+    // checking VALID PASSWORD
+    public void isValidPassword() {
+        Pattern pattern = Pattern.compile(".*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&+=]).*$");
+        Matcher matcher = pattern.matcher("gauriparh");
+    }
+
 
 
 
@@ -88,6 +94,11 @@ public class UserRegistration {
 
         // //Checking the valid 10digit mobile number//
         System.out.println(isValidmobilenumber());
+
+        
+        //Checking valid password//
+        String password = "gauriparh";
+        System.out.println(isValidPassword(password));
     
     }
 
