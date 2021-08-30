@@ -163,6 +163,16 @@ public class UserRegistration {
             UserRegistrationForm obj = new UserRegistrationForm();
             obj.happy_sad_Test();
         }
+        //Junit parameterised test cases.
+        @Test
+        public void parameterised_email_entry_test(String name){
+            Pattern p = Pattern.compile("\\b[A-Z0-9._%-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}\\b");
+            Matcher m = p.matcher("thegauriparhad@gmail.com");
+        }
+        public static void main(String[] args) {
+            String email = "thegauriparhad@gmail.com";
+            System.out.println(isValidEmail(email));
+        }
     }
 }
 
