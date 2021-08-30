@@ -82,6 +82,8 @@ public class UserRegistration {
     }
 
 
+
+
     public static void main(String[] args) {
         String str1 = "INDIA";
         System.out.println(isValidFirstUsername(str1));
@@ -140,10 +142,31 @@ public class UserRegistration {
         System.out.println(output);
     
     }
-
-
-
+    //junit happyand sad test cases:
+    @Test
+    public void happy_sad_test() {
+        String fname = "INDIA";
+        boolean fn = isValidFirstUsername(fname);
+        String lname = "Maharashtra";
+        boolean ln = isValidlastUsername(lname);
+        String email = "thegauriparhad@gmail.com";
+        boolean mid = isValidEmail(email);
+        String ph_no = "91 9648874225";
+        boolean ph = whenMatchesTenDigitNumber_thenCorrect(ph_no);
+        String password = "gauriparh";
+        boolean p = isValidPassword(password);
+        if (fn && ln && mid && ph && p) {
+            System.out.println("Happy Test Cases");
+        }
+        if (fn || ln || mid || ph || p) {
+            System.out.println("Sad Test Cases");
+            UserRegistrationForm obj = new UserRegistrationForm();
+            obj.happy_sad_Test();
+        }
+    }
 }
+
+
 
 
     
